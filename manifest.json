@@ -1,0 +1,17 @@
+{
+  "name": "LionPath Schedule",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Generate schedule from lionpath",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+    "content_scripts": [
+      {
+      "matches": ["<all_urls>"],
+      "js": ["ics.js", "FileSaver.min.js","Blob.js"]
+    }
+  ],
+  "permissions": ["tabs", "<all_urls>"]
+}
